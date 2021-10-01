@@ -1,13 +1,14 @@
+import { useState, useEffect } from 'react';
+import getPhotos from '../services/getPhotos';
 
-/* . entonces((r) = > r. json())
-    . entonces((resp) => {
-      const { data } = resp;
-      const dataGiffs = datos. mapa((i) => {
-        const { url } = i. imágenes. downsized_medium;
-        const { title, id } = i;
-        consola.log(url ,title ,id )
-        return { url, title, id };
-      });
-      consola.log(s)
-      devolver datosGiffs;
-    }); */
+const usePhotos = ({keyword}={keyword:null}) => {
+  const [Photos__img, setPhotos__img] = useState([]);
+  useEffect(() => {
+    const keyLast = keyword || localStorage.getItem('lastKey') || 'gatos';
+    getPhotos({ keyword: keyLast }).then((i) => setPhotos__img(i.results));
+    localStorage.setItem('lastKey', keyword);
+  }, [keyword]);
+  return Photos__img;
+};
+
+export default usePhotos;
