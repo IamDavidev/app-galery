@@ -1,19 +1,30 @@
-import { useEffect, useState } from "react";
-import getPhotos from "../services/getPhotos";
+import { useEffect, useState } from 'react';
+import getPhotos from '../services/getPhotos';
 
 const Photos = () => {
-    const [photos__img, getPhotos__img] = useState([]);
+  const [photos__img, getPhotos__img] = useState([]);
+  const [search_key , getSearch_key] = useState('')
+  useEffect(() => {
+    getPhotos().then((img) => getPhotos__img(img));
+  }, []);
 
-    useEffect(() => {
-      getPhotos().then((img) => getPhotos__img(img));
-    }, []);
-  return <>
-  {
-      photos__img.map(i=>(
-        <img key={i.id} src={i.urls.small} alt={i.title}/>
-      ))
-  }
-  </>;
+  const handleSubmit = (evt) =>  evt.preventDefault();
+  const handleChange = evt => getSearch_key(evt.target.value)
+  return (
+    <div className="photos">
+      <form onSubmit={handleSubmit}>
+        <label>
+          search :{' '}
+          <input type="text" className="input__sear" name="searchInput"  onchange={handleChange}/>
+        </label>
+      </form>
+      <>
+        {photos__img.map((i) => (
+          <img key={i.id} src={i.urls.small} alt={i.title} />
+        ))}
+      </>
+    </div>
+  );
 };
 
 export default Photos;
