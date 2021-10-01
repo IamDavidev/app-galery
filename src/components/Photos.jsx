@@ -1,23 +1,21 @@
 import { useState } from 'react';
 import usePhotos from '../hooks/usePhotos';
 const Photos = () => {
-  const [search_key, getSearch_key] = useState('');
+  const [search_key, setSearch_key] = useState('');
   const card__Images = usePhotos({ keyword: search_key });
-  const handleSubmit = (evt) => evt.preventDefault();
-  const handleChange = (evt) => getSearch_key(evt.target.value);
-  console.log(card__Images)
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    const key = evt.target[0].value;
+    setSearch_key(key);
+  };
+
   return (
     <div className="photos">
       <form onSubmit={handleSubmit}>
         <label>
           search :{' '}
-          <input
-            type="text"
-            className="input__sear"
-            name="searchInput"
-            onChange={handleChange}
-          />
-          {search_key}
+          <input type="text" className="input__sear" name="searchInput" />
         </label>
       </form>
       <>
@@ -30,11 +28,3 @@ const Photos = () => {
 };
 
 export default Photos;
-
-/* useEffect(() => {
-    const keyLocalLast = keyword || localStorage.getItem("LastKey") || "Gatitos";
-    GetGifs({ search: keyLocalLast }).then((gifs) => setGifs(gifs));
-    localStorage.setItem("LastKey", keyword);
-  }, [keyword]);
-  return gifs;
-}; */
