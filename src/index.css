@@ -12,23 +12,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.input__search{
-  padding:20px;
-  margin:20px;
-  border:1px solid #00ffff;
 
+a {
+  font-size: 15px;
 }
-.render__imgs{
-  display:grid;
-  grid-template-columns: 1fr 1fr 3px;
+
+input {
+  border: 1px solid #00ffff;
+  height: 50px
 }
-img{
-  border:1px solid #00ffff;
+.search {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
 }
-.card{
-  border:1px solid #00ffff;
+
+.render__imgs {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.card__img{
-  margin:15px;
-  padding:10px;
+
+
+.card {
+  border: 1px solid #00ffff;
+}
+
+.card__img {
+  margin: 15px;
+  padding: 10px;
+  justify-content:center;
+  align-items:center
+}
+
+@media screen and (min-width:1200px){
+  .render__imgs{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 
+  }
 }

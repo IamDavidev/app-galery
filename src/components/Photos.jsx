@@ -10,14 +10,20 @@ const Photos = () => {
   };
   return (
     <div className="photos">
-      <form onSubmit={handleSubmit}>
-        <label>
-          search :{' '}
-          <input type="text" className="input__search" name="searchInput" />
-        </label>
-      </form>
-      <CardPhotos props={search_key} />
-     </div>
+      <div className="search">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="input__search"
+            name="searchInput"
+            autofocus
+          />
+        </form>
+      </div>
+      <div className="render__imgs is-half">
+        <CardPhotos props={search_key} />
+      </div>
+    </div>
   );
 };
 
