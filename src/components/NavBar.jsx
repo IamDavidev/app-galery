@@ -13,9 +13,9 @@ const NavBar = () => {
         role="navigation"
         aria-label="main navigation"
       >
-        <div className="navbar-brand">
+        <div className="navbar-brand has-background-black-bis">
           <a className="navbar-item" href>
-            <h1 className="is-primary">David Lezama</h1>
+            <h1 className="is-primary ">David Lezama</h1>
           </a>
           <a
             role="button"
@@ -33,7 +33,7 @@ const NavBar = () => {
         </div>
         <div
           id="navbarBasicExample"
-          className={`navbar-menu ${is_active} has-background-info has-text-dark`}
+          className={`navbar-menu ${is_active} has-background-grey has-text-dark`}
         >
           {/* <div className="navbar-start">
             <a href className="navbar-item">
@@ -69,7 +69,7 @@ const NavBar = () => {
                 <a href className="button is-primary">
                   <strong>Sign up</strong>
                 </a>
-                <a href className="button is-light">
+                <a href className="button is-primary">
                   Log in
                 </a>
               </div>

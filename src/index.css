@@ -92,7 +92,8 @@ button{
   margin: 15px;
   padding: 10px;
   justify-content:center;
-  align-items:center
+  align-items:center;
+  background:rgb(17, 17, 17)
 }
 .img__profile{
   width:40px;

@@ -34,8 +34,8 @@ const CardPhotos = ({ keyword, page }) => {
             </div>
           </div>
 
-          <div className="card">
-            <footer className="card-footer">
+          <div className="card has-background-black-bis">
+            <footer className="card-footer has-text-white">
               <a href={i.links.download} className="card-footer-item">
                 view
               </a>
