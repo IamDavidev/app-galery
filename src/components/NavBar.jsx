@@ -15,7 +15,7 @@ const NavBar = () => {
       >
         <div className="navbar-brand">
           <a className="navbar-item" href>
-            <h1 className="is-primary">DLT</h1>
+            <h1 className="is-primary">David Lezama</h1>
           </a>
           <a
             role="button"
@@ -35,7 +35,7 @@ const NavBar = () => {
           id="navbarBasicExample"
           className={`navbar-menu ${is_active} has-background-info has-text-dark`}
         >
-          <div className="navbar-start">
+          {/* <div className="navbar-start">
             <a href className="navbar-item">
               Home
             </a>
@@ -62,7 +62,7 @@ const NavBar = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">

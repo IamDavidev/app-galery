@@ -1,6 +1,8 @@
 import usePhotos from '../hooks/usePhotos';
-const CardPhotos = ({ props }) => {
-  const card__Images = usePhotos({ keyword: props });
+const CardPhotos = ({ keyword, page }) => {
+  console.log(keyword);
+  console.log(page);
+  const card__Images = usePhotos({ keyword: keyword }, { page: page });
 
   return (
     <>
