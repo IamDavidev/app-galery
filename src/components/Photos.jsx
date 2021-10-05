@@ -16,7 +16,7 @@ const Photos = () => {
             type="text"
             className="input__search"
             name="searchInput"
-            autofocus
+            autoFocus
           />
         </form>
       </div>

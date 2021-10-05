@@ -1,12 +1,11 @@
 import usePhotos from '../hooks/usePhotos';
 const CardPhotos = ({ props }) => {
-  console.log(props);
   const card__Images = usePhotos({ keyword: props });
 
   return (
     <>
       {card__Images.map((i) => (
-        <div class="card card__img">
+        <div className="card card__img" key={i.id}>
           <div className="card-image">
             <figure className="image is-4by3">
               <img src={i.urls.small} alt={i.alt_description} />
@@ -33,7 +32,7 @@ const CardPhotos = ({ props }) => {
 
           <div className="card">
             <footer className="card-footer">
-              <a href={i.links.download} class="card-footer-item">
+              <a href={i.links.download} className="card-footer-item">
                 view
               </a>
               <a href={i.links.download_location} className="card-footer-item">

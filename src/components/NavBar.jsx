@@ -56,7 +56,7 @@ const NavBar = () => {
                 <a href className="navbar-item">
                   Contact
                 </a>
-                <hr href className="navbar-divider" />
+                <hr  className="navbar-divider" />
                 <a href className="navbar-item">
                   Report an issue
                 </a>

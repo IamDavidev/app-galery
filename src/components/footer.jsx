@@ -1,9 +1,10 @@
-import react from 'react';
 
 const Footer = () => {
   return (
     <div className="footer">
-      <h1>david Lezama</h1>
+      <span>
+        David Lezama &copy; <a href="https://github.com/L-David-T">Git Hub </a>
+      </span>
     </div>
   );
 };
