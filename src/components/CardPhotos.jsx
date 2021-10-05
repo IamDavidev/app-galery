@@ -1,9 +1,7 @@
 import usePhotos from '../hooks/usePhotos';
-const CardPhotos = ({ keyword, page }) => {
-  console.log(keyword);
-  console.log(page);
-  const card__Images = usePhotos({ keyword: keyword }, { page: page });
 
+const CardPhotos = ({ keyword, page }) => {
+  const card__Images = usePhotos({ keyword: keyword }, { page: page });
   return (
     <>
       {card__Images.map((i) => (
@@ -16,8 +14,12 @@ const CardPhotos = ({ keyword, page }) => {
           <div className="card-content">
             <div className="media">
               <div className="media-left">
-                <figure className="image is-30x30">
-                  <img src={i.user.profile_image.large} alt={i.user.id} />
+                <figure>
+                  <img
+                    src={i.user.profile_image.large}
+                    alt={i.user.id}
+                    className="img__profile"
+                  />
                 </figure>
               </div>
               <br />

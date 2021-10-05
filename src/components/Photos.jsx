@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../index.css';
 import CardPhotos from './CardPhotos';
+// import Loading from './Loading';
 const Photos = () => {
   const [search_key, setSearch_key] = useState('');
   const [page, setPage] = useState('');
@@ -36,7 +37,7 @@ const Photos = () => {
         <button onClick={page2}>2</button>
         <button onClick={page3}>3</button>
       </div>
-      <div className="render__imgs is-half">
+      <div className="render__imgs">
         <CardPhotos keyword={search_key} page={page} />
       </div>
     </div>

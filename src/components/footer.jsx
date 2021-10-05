@@ -1,9 +1,9 @@
-
 const Footer = () => {
   return (
     <div className="footer">
       <span>
-        David Lezama &copy; <a href="https://github.com/L-David-T">Git Hub </a>
+        {new Date().getFullYear()}   &copy; - 
+        <a href="https://github.com/L-David-T"  rel="noreferrer" target='_blank'>David Lezama Git Hub </a>
       </span>
     </div>
   );
