@@ -29,7 +29,7 @@ const CardPhotos = ({ keyword, page }) => {
                 rel="noopener noreferrer"
                 className="title is-4"
               >
-                {i.user.username}{' '}
+                {i.user.username}
               </a>
             </div>
           </div>
