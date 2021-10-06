@@ -14,26 +14,30 @@ const NavBar = () => {
         aria-label="main navigation"
       >
         <div className="navbar-brand has-background-black-bis">
-          <a className="navbar-item" href>
+          <a
+            className="navbar-item"
+            href="https://github.com/L-David-T"
+            rel="noreferrer"
+            target="_blank"
+          >
             <h1 className="is-primary ">David Lezama</h1>
           </a>
-          <a
-            role="button"
+          <button  
             className="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
             onClick={handleActive}
-            href
+            
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
         <div
           id="navbarBasicExample"
-          className={`navbar-menu ${is_active} has-background-grey has-text-dark`}
+          className={`navbar-menu ${is_active} has-background-dark has-text-dark`}
         >
           {/* <div className="navbar-start">
             <a href className="navbar-item">

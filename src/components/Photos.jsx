@@ -33,9 +33,15 @@ const Photos = () => {
         </form>
       </div>
       <div className="pages__api">
-        <button onClick={page1}>1</button>
-        <button onClick={page2}>2</button>
-        <button onClick={page3}>3</button>
+        <button className="button is-dark" onClick={page1}>
+          1
+        </button>
+        <button className="button is-dark" onClick={page2}>
+          2
+        </button>
+        <button className="button is-dark" onClick={page3}>
+          3
+        </button>
       </div>
       <div className="render__imgs">
         <CardPhotos keyword={search_key} page={page} />

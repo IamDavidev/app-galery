@@ -39,12 +39,6 @@ const CardPhotos = ({ keyword, page }) => {
               <a href={i.links.download} className="card-footer-item">
                 view
               </a>
-              <a href={i.links.download_location} className="card-footer-item">
-                ._.
-              </a>
-              <a href={i.links.self} className="card-footer-item">
-                error
-              </a>
             </footer>
           </div>
         </div>
