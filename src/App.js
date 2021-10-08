@@ -7,6 +7,7 @@ const App = () => {
   return (
     <div className="App__root has-background-black">
       <NavBar />
+      <h1>Photos David </h1>
       <Photos />
       <Footer />
     </div>
